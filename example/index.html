@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Vanilla Countdown - Show how many characters remaining in a HTML with pure JavaScript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <style type="text/css">
+        .chars-length {
+            background-color: whitesmoke;
+            display: inline-block;
+            margin: 20px 0 0;
+            padding: 10px 30px;
+            text-align: center;
+            width: 90px
+        }
+
+        .warn {
+            background-color: firebrick;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Vanilla Countdown</h1>
+            <p>Show how many characters remaining in a HTML with pure JavaScript</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <p>With <code>maxChars</code> property defined:</p>
+                    <textarea class="form-control countdown" rows="6"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <p>Without <code>maxChars</code>, the default value is 140:</p>
+                    <textarea class="form-control countdown2" rows="6"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../build/vcountdown.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        VCountdown.init({
+            target: '.countdown',
+            maxChars: 160
+        });
+
+        VCountdown.init({
+            target: '.countdown2'
+        });
+    </script>
+</body>
+</html>
