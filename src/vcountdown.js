@@ -1,6 +1,7 @@
 /*jslint browser: true*/
 /*global define, module, exports*/
 (function (root, factory) {
+    "use strict";
     if (typeof define === 'function' && define.amd) {
         define([], factory);
     } else if (typeof exports === 'object') {
