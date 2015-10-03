@@ -11,7 +11,7 @@ describe("VCountdown", function() {
 
   describe("#hasClass", function() {
     it("returns false", function() {
-      var vcd = VCountdown.init({
+      var vcd = VCountdown({
           target: '.countdown',
           maxChars: 160
       });
@@ -21,7 +21,7 @@ describe("VCountdown", function() {
 
     it("returns true", function() {
       $element.className += ' foo';
-      var vcd = VCountdown.init({
+      var vcd = VCountdown({
           target: '.countdown',
           maxChars: 160
       });
@@ -31,7 +31,7 @@ describe("VCountdown", function() {
   });//#hasClass
 
   it("#addClass", function() {
-    var vcd = VCountdown.init({
+    var vcd = VCountdown({
         target: '.countdown',
         maxChars: 160
     });
@@ -41,7 +41,7 @@ describe("VCountdown", function() {
   });
 
   it("#removeClass", function() {
-    var vcd = VCountdown.init({
+    var vcd = VCountdown({
         target: '.countdown',
         maxChars: 160
     });
