@@ -17,22 +17,18 @@
             return new VCountdown(options);
         }
 
-        if (!options.target) {
-            throw new Error('Provide a target to count characters');
+        if (!options) {
+            options = {};
         }
 
-        if (typeof options === 'string') {
-            options = { key : options };
+        if (!options.target) {
+            throw 'Provide a target to count characters';
         }
 
         this.target   = document.querySelector(options.target);
         this.maxChars = options.maxChars || 140;
 
         this.countdown();
-    };
-
-    VCountdown.init = function (options) {
-        return new VCountdown(options);
     };
 
     VCountdown.prototype = {
@@ -86,14 +82,12 @@
             this.update();
         },
         countdown: function () {
-            var self = this;
-
             this.setMaxChars();
             this.charsLen();
 
             this.target.addEventListener('keyup', function () {
-                self.update();
-            }, false);
+                this.update();
+            }.bind(this), false);
         }
     };
 
