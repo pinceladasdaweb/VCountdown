@@ -16,7 +16,7 @@ Add the following javascript before your ```</body>``` tag:
 ```html
 <script src="path/to/vcountdown.min.js"></script>
 <script>
-    VCountdown.init({
+    VCountdown({
         target: '.countdown',
         maxChars: 160
     });
