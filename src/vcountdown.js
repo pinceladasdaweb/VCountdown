@@ -85,9 +85,7 @@
             this.setMaxChars();
             this.charsLen();
 
-            this.target.addEventListener('keyup', function () {
-                this.update();
-            }.bind(this), false);
+            this.target.addEventListener('keyup', this.update.bind(this), false);
         }
     };
 
